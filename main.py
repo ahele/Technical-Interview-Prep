@@ -424,6 +424,113 @@ Return True if nums can be divided into n pairs, otherwise return False.
 # nums = [3,2,3,2,2,2]
 # print(divideList(nums))
         
-    
-    
-  
+# def count_mississippi(limit):
+#   for num in range(1, limit +1):
+#     print( f"{num} mississippi")
+
+# count_mississippi(5)
+
+'''
+   Write a function swap_ends() that accepts a string my_str as a parameter and returns a new string where the first and last characters from my_str are swapped.
+'''
+
+# def swap_ends(my_str):
+#     new_str=""
+
+#     if len(my_str) < 2:
+#         new_str = my_str
+
+#     if len(my_str) == 2:
+#         for i in range(len(my_str)):
+#             new_str += my_str[-(i+1)]
+
+#     if len(my_str) > 2:
+#         end = my_str[0]
+#         start = my_str[-1]
+#         mid = my_str[1:(len(my_str)-1)]
+#         new_str = start + mid + end
+#     return new_str 
+
+# my_str = "boat"
+# swapped = swap_ends(my_str)
+# print(swapped)
+
+'''
+Write a function is_pangram() that takes in a string my_str as a parameter and returns True if the string is a pangram and False if not. A pangram is a sentence containing every letter in the English alphabet.
+'''
+
+# my_str = "boat"
+# swapped = swap_ends(my_str)
+# print(swapped)
+
+# def is_pangram(my_str):
+#     alphabet = "qwertyuiopasdfghjklzxcvbnm"
+#     for i in alphabet:
+#         return i in my_str.lower()
+
+# my_str = "The quick brown fox jumps over the lazy dog"
+# print(is_pangram(my_str))
+
+# str2 = "The dog jumped"
+# print(is_pangram(str2))
+
+'''
+   Write a function reverse_string() that takes a string my_str as a parameter and returns the string reversed.
+'''
+
+# def reverse_string(my_str):
+#     new_str = ""
+#     for i in range(len(my_str)):
+#         new_str += my_str[-(i+1)]
+#     return new_str
+
+# my_str = "live"
+# print(reverse_string(my_str))
+
+'''
+   Write a function first_unique_char() that given a string my_str as a parameter, it finds the first non-repeating character in it and returns its index. If it does not exist, then return -1.
+'''
+# def first_unique_char(my_str):
+#   id_count = {}
+#   for i in my_str:
+#       if i in id_count:
+#           id_count[i] += 1
+#       else:
+#           id_count[i] = 1
+#   print(id_count)
+#   for i in my_str:
+#       if id_count[i] == 1:
+#         ind = my_str.index(i)
+#         return ind
+#   return -1
+
+# my_str = "leetcode"
+# print(first_unique_char(my_str))
+
+# str2 = "loveleetcode"
+# print(first_unique_char(str2))
+
+# str3 = "aabb"
+# print(first_unique_char(str3))
+
+'''
+Write a function min_distance() that takes in a list of strings words and two strings word1 and word2' as parameters. The function should return the minimum distance between word1 and word2 in the list of words. The distance between one word and an adjacent word in the list is 1.
+'''
+
+# def min_distance(words, word1, word2):
+#   index_collection1 = [i for i, j in enumerate(words) if j == word1]
+#   index_collection2 = [k for k, l in enumerate(words) if l == word2 ]
+#   dist = [ ]
+#   for x in index_collection1:
+#       for y in index_collection2:
+#           dist.append(abs(x-y))
+#   return sorted(dist)[0]
+# words = ["the", "quick", "brown", "fox", "jumped", "the"]
+# dist1 = min_distance(words, "quick", "jumped")
+# dist2 = min_distance(words, "the", "jumped")
+# print(dist1)
+# print(dist2)   
+
+# words2 = ["code", "path", "code", "contribute",  "practice"]
+# dist3 = min_distance(words2, "code", "practice")
+# print(dist3)
