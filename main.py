@@ -534,3 +534,127 @@ Write a function min_distance() that takes in a list of strings words and two st
 # words2 = ["code", "path", "code", "contribute",  "practice"]
 # dist3 = min_distance(words2, "code", "practice")
 # print(dist3)
+
+'''
+Write a function sum_of_number_strings() that takes in a list of strings nums. Each string is a representations of integers. The function should return the sum of these strings as an integer.
+'''
+
+# def sum_of_number_strings(nums):
+#     sum = 0
+#     for i in nums:
+#         sum += int(i)
+#     return sum
+
+# nums = ["10", "20", "30"]
+# sum = sum_of_number_strings(nums)
+# print(sum)
+
+
+'''
+Write a function remove_duplicates() that takes in a sorted list of integers nums as a parameter and removes all duplicates in the list. The function returns the modified list.
+'''
+# def remove_duplicates(nums):
+#   i = 0
+#   while i < len(nums)-1:
+#     if nums[i] == nums[i+1]:
+#       nums.pop(i)
+#     else:
+#       i += 1
+#   return nums
+      
+# nums = [1,1,1,2,3,4,4,5,6,6]
+# print(remove_duplicates(nums))
+
+'''
+Write a function reverse_only_letters() that takes in a string s as a parameter. The function reverses the order of the letters in the string and returns the new string. Non-letter characters should remain in their original positions.
+'''
+# def reverse_only_letters(s):
+#     alfa=[x for x in s if x.isalpha()]
+#     s_list = list(s)
+#     for i,j in enumerate(s):
+#       if j.isalpha():
+#         s_list[i] = alfa.pop()
+#     return "".join(s_list)
+
+# s = "a-bC-dEf-ghIj"
+# reversed_s = reverse_only_letters(s)
+# print(reversed_s)
+
+
+'''
+Write a function longest_uniform_substring() that takes in a string s and returns the length of the longest uniform substring. A uniform substring consists of a single repeated character.
+'''
+# def longest_uniform_substring(s):
+#     longest={}
+#     for i in s:
+#         if i in longest:
+#             longest[i] += 1
+#         else:
+#             longest[i] = 1
+
+#     largest = None
+#     for j in longest.values():
+#         if largest == None:
+#             largest = j
+#         elif largest < j:
+#             largest = j
+#     return largest
+
+# s1 = "aabbbbCdAA"
+# l1 = longest_uniform_substring(s1)
+# print(l1)
+
+# s2 = "abcdef"
+# l2 = longest_uniform_substring(s2)
+# print(l2)
+
+'''
+In the game League of Legends, Teemo attacks his enemy Ashe with poison arrows. Write a function find_poisoned_duration() that takes in two parameters: time_series (the time at which Teemo's attacks hits Ashe) and time_duration (the duration of the poisoning effect). The function returns the total time that Ashe is in a poisoned condition.
+
+time_series is a list of integers that represents the times at which Teemo attacks and makes Ashe poisoned for the exact time_duration.
+
+If Teemo hits Ashe while she is still poisoned, the poison's duration starts over. For example, if Teemo attacks at times 1 and 4 for 3 seconds, the states at each time would be: 5
+'''
+
+# def find_poisoned_duration(time_series, duration):
+#   total_time = 0
+#   for i in range(len(time_series)-1):
+#     time_difference = time_series[i+1] - time_series[i] - 1
+#     if time_difference <= duration:
+#       total_time += time_difference
+#     elif time_difference > duration:
+#       total_time += duration 
+#   new_time = total_time + duration
+#   return new_time
+  
+# time_series = [1,4,9]
+# damage = find_poisoned_duration(time_series, 3)
+# print(damage)
+
+'''
+Write a function sum_of_unique_elements() that takes in two lists of integers, lst1 and lst2, as parameters and returns the sum of the elements that are unique in lst1.
+
+An element is unique if:
+
+it appears exactly once in lst1
+it does not appear in lst2
+'''
+
+# def sum_of_unique_elements(lst1, lst2):
+#   unique_sum = 0
+#   lst1=sorted(lst1)
+#   for i in range(len(lst1)-1):
+#     if lst1[i] != lst1[(i+1)] and lst1[i] not in lst2:
+#       unique_sum += lst1[i]
+#   return unique_sum
+
+# lstA = [1, 2 ,3, 4] 
+# lstB = [3, 4, 5, 6]
+# lstC = [7, 7, 7, 7]
+
+# sum1 = sum_of_unique_elements(lstA, lstB)
+# print(sum1)
+
+# sum2 = sum_of_unique_elements(lstC, lstB)
+# print(sum2)
+      
