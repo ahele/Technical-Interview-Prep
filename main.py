@@ -735,3 +735,177 @@ Write a function first_palindrome() that takes in a list of strings words as a p
 # print(nums)
 # print(remove_duplicates(nums))
 # print(nums) # same list
+
+'''
+Write a function is_long_pressed() that takes in a string name and a string typed as parameters. Imagine your friend is typing their name into a keyboard and when typing a character, the key might get long pressed and the character will be typed 1 or more times.
+
+The function should examine the typed characters and return True if it is possible that it was your friends name with some characters being long pressed and False otherwise.
+'''
+
+# def is_long_pressed(name, typed):
+#    i, j = 0, 0
+#    if name != typed:   
+#       while i < len(name) and j < len(typed):
+#          if typed[j] == typed[j+1] and typed[j] == name[i]:
+#             j += 1
+#             i += 1
+#             continue
+#          elif typed[j+1] == name[i]:
+#             j += 2
+#             i += 1
+#             continue
+#          else:
+#             return False
+
+#    return True
+
+# name = "alex"
+# typed = "aaleex"
+# print(is_long_pressed(name, typed))
+         
+# name2 = "saeed"
+# typed2 = "ssaaedd"
+# print(is_long_pressed(name2, typed2))
+
+# name3 = "courtney"
+# typed3 = "courtney"
+# print(is_long_pressed(name3, typed3))
+
+'''
+Imagine you're an awesome babysitter and want to give the kids you're looking after some cookies as a snack.
+Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with.
+Each cookie j has a cookie size s[j]
+'''
+
+# def find_content_children(s, g):
+#    total = 0
+#    for i, j in zip(s, g):
+#       if i >= j:
+#          total += 1
+#    return total
+
+# g = [1,2,3]
+# s = [1,1,3]
+# print(f" the number of content children I babysit are {find_content_children(s,g)}")
+
+# q = [1,1]
+# r = [2,2,2]
+# print(f" the number of content children I babysit are {find_content_children(r,q)}")
+
+'''
+Write a function valid_palindrome() that takes in a string s as a parameter and returns True if s can be a palindrome after deleting at most one character from it and False otherwise.
+'''
+
+# def is_palindrome(s):
+#    s_list = list(s)
+#    to_merge_s_list = list(s)
+#    i , j = 0 , len(s_list)-1
+#    while i < j:
+#       to_merge_s_list[i] = s_list[j]
+#       i += 1
+#       j -= 1
+#    return "".join(to_merge_s_list)
+
+# def takeout(s, i):
+#     s_list=list(s)
+#     s_list.remove(i)
+#     return "".join(s_list)
+
+# def valid_palindrome(s):
+#    for k in s:
+#       new_s = takeout(s, k)
+#       if is_palindrome(new_s) != new_s:
+#          continue
+#       else:
+#          return True
+
+#    return False
+
+# s = "aba"
+# s2 = "abca"
+# s3 = "abc"
+
+# print(f"can {s} still be a palindrome after deleting at most one character from it? \n {valid_palindrome(s)}")
+# print(f"can {s2} be a palindrome after deleting at most one character from it? \n {valid_palindrome(s2)}")
+# print(f"can {s3} be a palindrome after deleting at most one character from it? \n {valid_palindrome(s3)}")
+
+'''
+Write a function find_largest_k() that takes in a list of integers nums that does not contain any zeroes as a parameter. The function finds the largest positive integer k such that -k also exists in the array and returns k. If there is no such integer, return -1.
+'''
+# def find_largest_k(nums):
+#    possible_list = []
+#    for i in range(len(nums)):
+#       j = i+1
+#       while i < len(nums) and j < len(nums)-1:
+#          if nums[i] != -nums[j]:
+#             j += 1
+#          elif nums[i] == -nums[j]:
+#             possible_list.append(abs(nums[j]))
+#             j += 1
+#          else:
+#             i += 1
+
+#    if not possible_list:
+#       return -1
+#    else:
+#       return max(possible_list)
+
+# nums = [-1,2,-3,3,-1]
+# print(f"the largest possible k such that -k exists is {find_largest_k(nums)}")
+
+# nums2 = [-10,2,7,-3]
+# print(f"the largest possible k such that -k exists is {find_largest_k(nums2)}")
+
+'''
+Write a function count_good_substrings() that takes in a string s as a parameter and returns the number of good substrings of length three. A string is good if there are no repeated characters. A substring is a continuous sequence of characters in a string.
+'''
+def count_good_substrings(s):
+   count = 0
+   for i in range(len(s)-2):
+      j = i + 1
+      if s[i]==s[j] or s[i]==[j+1] or s[j]==s[j+1]:
+         break
+      elif s[i]!=s[j] and s[i]!=[j+1] and s[j]!=s[j+1]:
+         count += 1
+
+   return count
+   
+s1 = "xyzzaz"
+s2 = "xyzxyz"
+print(f"there is/are {count_good_substrings(s1)} number of good subsrings of length three ")
+print(f"there is/are {count_good_substrings(s2)} number of good subsrings of length three ")
+
+'''
+Write a function contains_nearby_duplicate() that takes in a list lst and a positive number k as parameters. The function returns True if the list contains any duplicate elements within the range k and False otherwise. If k is more than the list's size, the solution should check for duplicates in the complete list.
+'''
+# def contains_nearby_duplicate(lst, k):
+#    solution = 0
+#    if k > len(lst):
+#       print(k)
+#       print(len(lst))
+#       n_lst = sorted(lst)
+#       solution = 0
+#       for i in range(len(n_lst)):
+#          if n_lst[i]==n_lst[i+1]:
+#             solution += 1
+#             continue
+
+#    else:
+#       list_of_k=list(range(k))
+#       q = 0
+#       t = list_of_k[q]
+#       while  t in list_of_k and t in lst:
+#          j =lst.index(t)
+#          if lst[j+1] == lst[j+2] or lst[j-1]==lst[j-2]:
+#             solution = +1
+#             break
+#          else:
+#             q += 1
+
+#    return bool(solution)
+         
+# lst = [1, 2, 3, 1, 2, 3]
+# lst2 = [1, 0, 1, 1]
+# print(f"Does the list contain any duplicate within the range of k? \n{contains_nearby_duplicate(lst, 2)}")
+# print(f"Does the list contain any duplicate within the range of k? \n{contains_nearby_duplicate(lst2, 1)}")
+       
