@@ -859,21 +859,21 @@ Write a function find_largest_k() that takes in a list of integers nums that doe
 '''
 Write a function count_good_substrings() that takes in a string s as a parameter and returns the number of good substrings of length three. A string is good if there are no repeated characters. A substring is a continuous sequence of characters in a string.
 '''
-def count_good_substrings(s):
-   count = 0
-   for i in range(len(s)-2):
-      j = i + 1
-      if s[i]==s[j] or s[i]==[j+1] or s[j]==s[j+1]:
-         break
-      elif s[i]!=s[j] and s[i]!=[j+1] and s[j]!=s[j+1]:
-         count += 1
+# def count_good_substrings(s):
+#    count = 0
+#    for i in range(len(s)-2):
+#       j = i + 1
+#       if s[i]==s[j] or s[i]==[j+1] or s[j]==s[j+1]:
+#          break
+#       elif s[i]!=s[j] and s[i]!=[j+1] and s[j]!=s[j+1]:
+#          count += 1
 
-   return count
+#    return count
    
-s1 = "xyzzaz"
-s2 = "xyzxyz"
-print(f"there is/are {count_good_substrings(s1)} number of good subsrings of length three ")
-print(f"there is/are {count_good_substrings(s2)} number of good subsrings of length three ")
+# s1 = "xyzzaz"
+# s2 = "xyzxyz"
+# print(f"there is/are {count_good_substrings(s1)} number of good substrings of length three ")
+# print(f"there is/are {count_good_substrings(s2)} number of good substrings of length three ")
 
 '''
 Write a function contains_nearby_duplicate() that takes in a list lst and a positive number k as parameters. The function returns True if the list contains any duplicate elements within the range k and False otherwise. If k is more than the list's size, the solution should check for duplicates in the complete list.
@@ -908,4 +908,304 @@ Write a function contains_nearby_duplicate() that takes in a list lst and a posi
 # lst2 = [1, 0, 1, 1]
 # print(f"Does the list contain any duplicate within the range of k? \n{contains_nearby_duplicate(lst, 2)}")
 # print(f"Does the list contain any duplicate within the range of k? \n{contains_nearby_duplicate(lst2, 1)}")
-       
+
+# class Pokemon:
+#     def __init__(self, name, types):
+#         self.name = name
+#         self.types = types
+#         self.is_caught = False
+
+# my_pokemon = Pokemon("Pikachu", ["Electric"])
+# print(my_pokemon.name)
+# print(my_pokemon.types)
+
+# class Pokemon:
+#    def __init__(self, name, types):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+
+#    def print_pokemon(self):
+#       print({
+#          "name": self.name,
+#          "types": self.types,
+#          "is_caught": self.is_caught
+#       })
+
+# my_pokemon =Pokemon("Squirtle", ["Water"])
+# my_pokemon.print_pokemon()
+
+# class Pokemon:
+#    def __init__(self, name, types):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+
+#    def print_pokemon(self):
+#       print({
+#          "name": self.name,
+#          "types": self.types,
+#          "is_caught": self.is_caught
+#       })
+
+#    def catch(self):
+#       self.is_caught = not self.is_caught
+
+# my_pokemon = Pokemon("rattata", ["Normal"])
+# my_pokemon.print_pokemon()
+
+# my_pokemon.catch()
+# my_pokemon.print_pokemon()
+
+'''
+Update the Pokemon class with a new method choose() that takes in no parameters except self.
+
+If the Pokemon is caught, the method should print the string "<Pokemon name> I choose you!".
+
+Otherwise, it should print "<Pokemon name> is wild! Catch them if you can!".
+'''
+
+# class Pokemon:
+#    def __init__(self, name, types):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+
+#    def print_pokemon(self):
+#       print({
+#          "name": self.name,
+#          "types": self.types,
+#          "is_caught": self.is_caught
+#       })
+
+#    def catch(self):
+#       self.is_caught = not self.is_caught
+
+#    def choose(self):
+#       if self.is_caught:
+#          print(f"{self.name} I choose you!")
+#       else:
+#          print(f"{self.name} is wild! Catch them if you can!")
+
+# my_pokemon = Pokemon("rattata", ["Normal"])
+# my_pokemon.print_pokemon()
+
+# my_pokemon.choose()
+# my_pokemon.catch()
+# my_pokemon.choose()
+
+'''
+Update the Pokemon class with a new method add_type() that takes in a string new_type as a parameter.
+
+It should add new_type to the Pokemon's list of types.
+'''
+# class Pokemon:
+#    def __init__(self, name, types):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+
+#    def print_pokemon(self):
+#       print({
+#          "name": self.name,
+#          "types": self.types,
+#          "is_caught": self.is_caught
+#       })
+
+#    def catch(self):
+#       self.is_caught = not self.is_caught
+
+#    def choose(self):
+#       if self.is_caught:
+#          print(f"{self.name} I choose you!")
+#       else:
+#          print(f"{self.name} is wild! Catch them if you can!")
+
+#    def add_type(self, new_type):
+#       self.types.append(new_type)
+
+# jigglypuff = Pokemon("Jigglypuff", ["Normal"])
+# jigglypuff.print_pokemon()
+
+# jigglypuff.add_type("Fairy")
+# jigglypuff.print_pokemon()
+
+'''
+Outside the Pokemon class, write a new function get_by_type() that takes in a list of Pokemon instances my_pokemon and a string pokemon_type as parameters.
+
+The function should return a list of all Pokemon instances from my_pokemon that have the type pokemon_type.
+
+'''
+
+# class Pokemon:
+#    def __init__(self, name, types):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+
+#    def print_pokemon(self):
+#       print({
+#          "name": self.name,
+#          "types": self.types,
+#          "is_caught": self.is_caught
+#       })
+
+#    def catch(self):
+#       self.is_caught = not self.is_caught
+
+#    def choose(self):
+#       if self.is_caught:
+#          print(f"{self.name} I choose you!")
+#       else:
+#          print(f"{self.name} is wild! Catch them if you can!")
+
+#    def add_type(self, new_type):
+#       self.types.append(new_type)
+
+# def get_by_type(my_pokemon, pokemon_type):
+#    new_lst =[pokemon.name for pokemon in my_pokemon if pokemon_type in pokemon.types]
+#    return new_lst
+
+
+# jigglypuff = Pokemon("Jigglypuff", ["Normal", "Fairy"])
+# diglett = Pokemon("Diglett", ["Ground"])
+# meowth = Pokemon("Meowth", ["Normal"])
+# pidgeot = Pokemon("Pidgeot", ["Normal", "Flying"])
+# blastoise = Pokemon("Blastoise", ["Water"])
+
+# my_pokemon = [jigglypuff, diglett, meowth, pidgeot, blastoise]
+# normal_pokemon = get_by_type(my_pokemon, "Normal")
+# print(normal_pokemon)
+
+'''
+Some Pokemon can evolve into other species of Pokemon. In the updated Pokemon class below, each instance of Pokemon has an attribute evolution. The attribute will either be the default value of None or another Pokemon instance.
+
+Write a function get_evolutionary_line() that takes in a Pokemon object starter_pokemon as a parameter.
+
+The function should return a list of itself and the Pokemon that the starter_pokemon can evolve into.
+'''
+
+# class Pokemon():
+#    def  __init__(self, name, types, evolution = None):
+#       self.name = name
+#       self.types = types
+#       self.is_caught = False
+#       self.evolution = evolution
+   
+#    def __repr__(self):
+#       return f"{self.name}"
+
+# def get_evolutionary_line(starter_pokemon):
+#    evolutionary_line = []
+#    current_pokemon = starter_pokemon
+
+#    while current_pokemon is not None:
+#       evolutionary_line.append(current_pokemon)
+#       current_pokemon = current_pokemon.evolution
+
+#    return evolutionary_line
+   
+# charizard = Pokemon("Charizard", ["fire", "flying"])
+# charmeleon = Pokemon("Charmeleon", ["fire"], charizard)
+# charmander = Pokemon("Charmander", ["fire"], charmeleon)
+
+# charmander_list = get_evolutionary_line(charmander)
+# print(charmander_list)
+
+# charmeleon_list = get_evolutionary_line(charmeleon)
+# print(charmeleon_list)
+
+# charizard_list = get_evolutionary_line(charizard)
+# print(charizard_list)
+
+'''
+The first node should have value a and be stored in a variable node_one.
+The second node should have value b and be stored in a variable node_two.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# node_one = Node("a")
+# node_two = Node("b")
+# print(node_one.value) 
+# print(node_one.next) 
+# print(node_two.value)
+# print(node_two.next) 
+
+'''
+To link the nodes, we can set a node's next attribute to hold another node. Update node_one from the Problem 9 to point to node_two.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+
+# node_one = Node("a")
+# node_two = Node("b")
+# node_one.next = node_two
+
+# print(node_one.value)
+# print(node_one.next)
+# print(node_two.value)
+
+'''
+Create the list ["Mario", "Luigi", "Wario", "Toad"] as a linked list given the Node class:
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# node_4 = Node("Toad")
+# node_3 = Node("Wario", node_4)
+# node_2 = Node("Luigi", node_3)
+# node_1 = Node("Mario", node_2)
+
+# print(node_1.value, "->", node_1.next.value)
+# print(node_2.value, "->", node_2.next.value)
+# print(node_3.value, "->", node_3.next.value)
+# print(node_4.value, "->", node_4.next)
+
+'''
+Write a function print_linked_list() that takes in a head node as a parameter and prints the linked list using the string " -> " to separate each node.
+'''
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next= next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+
+# def print_linked_list(head):
+#    lst= []
+#    current = head
+#    while(current):
+#       lst.append(str(current))
+#       current = current.next
+#    return " - > ".join(lst)
+
+# a = Node("a", Node("b", Node("c", Node("d", Node("e")))))
+
+# print(print_linked_list(a))
+
+
+
+
+
+
+   
+
+
+
+
+
+   
