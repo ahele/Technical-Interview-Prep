@@ -684,7 +684,6 @@ Write a function sort_list_by_parity() that takes in an integer list nums as a p
 Write a function first_palindrome() that takes in a list of strings words as a parameter and returns the first palindromic string in the list. A string is palindromic if it reads the same forward and backward. If there is no such string, return an empty string ""
 '''
 
-
 # def palindrome_element(n):
 #    n_new = list(n)
 #    new_n = list(n)
@@ -697,18 +696,16 @@ Write a function first_palindrome() that takes in a list of strings words as a p
 
 #    return "".join(new_n)
 
-
 # def first_palindrome(words):
 #    palindrome_words = []
 #    for i in words:
 #       if palindrome_element(i) == i:
 #          palindrome_words.append(i)
-   
+
 #    if not palindrome_words:
 #       return ""
 #    else:
 #       return palindrome_words[0]
-   
 
 # words = ["abc", "car", "ada", "racecar", "cool"]
 # palindrome1 = first_palindrome(words)
@@ -730,12 +727,11 @@ Write a function first_palindrome() that takes in a list of strings words as a p
 #        else:
 #           i += 1
 #     return nums
-   
+
 # nums = [1,1,2,3,4,4,4,5]
 # print(nums)
 # print(remove_duplicates(nums))
 # print(nums) # same list
-
 '''
 Write a function is_long_pressed() that takes in a string name and a string typed as parameters. Imagine your friend is typing their name into a keyboard and when typing a character, the key might get long pressed and the character will be typed 1 or more times.
 
@@ -744,7 +740,7 @@ The function should examine the typed characters and return True if it is possib
 
 # def is_long_pressed(name, typed):
 #    i, j = 0, 0
-#    if name != typed:   
+#    if name != typed:
 #       while i < len(name) and j < len(typed):
 #          if typed[j] == typed[j+1] and typed[j] == name[i]:
 #             j += 1
@@ -762,7 +758,7 @@ The function should examine the typed characters and return True if it is possib
 # name = "alex"
 # typed = "aaleex"
 # print(is_long_pressed(name, typed))
-         
+
 # name2 = "saeed"
 # typed2 = "ssaaedd"
 # print(is_long_pressed(name2, typed2))
@@ -770,7 +766,6 @@ The function should examine the typed characters and return True if it is possib
 # name3 = "courtney"
 # typed3 = "courtney"
 # print(is_long_pressed(name3, typed3))
-
 '''
 Imagine you're an awesome babysitter and want to give the kids you're looking after some cookies as a snack.
 Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with.
@@ -791,7 +786,6 @@ Each cookie j has a cookie size s[j]
 # q = [1,1]
 # r = [2,2,2]
 # print(f" the number of content children I babysit are {find_content_children(r,q)}")
-
 '''
 Write a function valid_palindrome() that takes in a string s as a parameter and returns True if s can be a palindrome after deleting at most one character from it and False otherwise.
 '''
@@ -828,7 +822,6 @@ Write a function valid_palindrome() that takes in a string s as a parameter and 
 # print(f"can {s} still be a palindrome after deleting at most one character from it? \n {valid_palindrome(s)}")
 # print(f"can {s2} be a palindrome after deleting at most one character from it? \n {valid_palindrome(s2)}")
 # print(f"can {s3} be a palindrome after deleting at most one character from it? \n {valid_palindrome(s3)}")
-
 '''
 Write a function find_largest_k() that takes in a list of integers nums that does not contain any zeroes as a parameter. The function finds the largest positive integer k such that -k also exists in the array and returns k. If there is no such integer, return -1.
 '''
@@ -855,7 +848,6 @@ Write a function find_largest_k() that takes in a list of integers nums that doe
 
 # nums2 = [-10,2,7,-3]
 # print(f"the largest possible k such that -k exists is {find_largest_k(nums2)}")
-
 '''
 Write a function count_good_substrings() that takes in a string s as a parameter and returns the number of good substrings of length three. A string is good if there are no repeated characters. A substring is a continuous sequence of characters in a string.
 '''
@@ -869,12 +861,11 @@ Write a function count_good_substrings() that takes in a string s as a parameter
 #          count += 1
 
 #    return count
-   
+
 # s1 = "xyzzaz"
 # s2 = "xyzxyz"
 # print(f"there is/are {count_good_substrings(s1)} number of good substrings of length three ")
 # print(f"there is/are {count_good_substrings(s2)} number of good substrings of length three ")
-
 '''
 Write a function contains_nearby_duplicate() that takes in a list lst and a positive number k as parameters. The function returns True if the list contains any duplicate elements within the range k and False otherwise. If k is more than the list's size, the solution should check for duplicates in the complete list.
 '''
@@ -903,7 +894,7 @@ Write a function contains_nearby_duplicate() that takes in a list lst and a posi
 #             q += 1
 
 #    return bool(solution)
-         
+
 # lst = [1, 2, 3, 1, 2, 3]
 # lst2 = [1, 0, 1, 1]
 # print(f"Does the list contain any duplicate within the range of k? \n{contains_nearby_duplicate(lst, 2)}")
@@ -956,7 +947,6 @@ Write a function contains_nearby_duplicate() that takes in a list lst and a posi
 
 # my_pokemon.catch()
 # my_pokemon.print_pokemon()
-
 '''
 Update the Pokemon class with a new method choose() that takes in no parameters except self.
 
@@ -993,7 +983,6 @@ Otherwise, it should print "<Pokemon name> is wild! Catch them if you can!".
 # my_pokemon.choose()
 # my_pokemon.catch()
 # my_pokemon.choose()
-
 '''
 Update the Pokemon class with a new method add_type() that takes in a string new_type as a parameter.
 
@@ -1029,7 +1018,6 @@ It should add new_type to the Pokemon's list of types.
 
 # jigglypuff.add_type("Fairy")
 # jigglypuff.print_pokemon()
-
 '''
 Outside the Pokemon class, write a new function get_by_type() that takes in a list of Pokemon instances my_pokemon and a string pokemon_type as parameters.
 
@@ -1066,7 +1054,6 @@ The function should return a list of all Pokemon instances from my_pokemon that 
 #    new_lst =[pokemon.name for pokemon in my_pokemon if pokemon_type in pokemon.types]
 #    return new_lst
 
-
 # jigglypuff = Pokemon("Jigglypuff", ["Normal", "Fairy"])
 # diglett = Pokemon("Diglett", ["Ground"])
 # meowth = Pokemon("Meowth", ["Normal"])
@@ -1076,7 +1063,6 @@ The function should return a list of all Pokemon instances from my_pokemon that 
 # my_pokemon = [jigglypuff, diglett, meowth, pidgeot, blastoise]
 # normal_pokemon = get_by_type(my_pokemon, "Normal")
 # print(normal_pokemon)
-
 '''
 Some Pokemon can evolve into other species of Pokemon. In the updated Pokemon class below, each instance of Pokemon has an attribute evolution. The attribute will either be the default value of None or another Pokemon instance.
 
@@ -1091,7 +1077,7 @@ The function should return a list of itself and the Pokemon that the starter_pok
 #       self.types = types
 #       self.is_caught = False
 #       self.evolution = evolution
-   
+
 #    def __repr__(self):
 #       return f"{self.name}"
 
@@ -1104,7 +1090,7 @@ The function should return a list of itself and the Pokemon that the starter_pok
 #       current_pokemon = current_pokemon.evolution
 
 #    return evolutionary_line
-   
+
 # charizard = Pokemon("Charizard", ["fire", "flying"])
 # charmeleon = Pokemon("Charmeleon", ["fire"], charizard)
 # charmander = Pokemon("Charmander", ["fire"], charmeleon)
@@ -1117,7 +1103,6 @@ The function should return a list of itself and the Pokemon that the starter_pok
 
 # charizard_list = get_evolutionary_line(charizard)
 # print(charizard_list)
-
 '''
 The first node should have value a and be stored in a variable node_one.
 The second node should have value b and be stored in a variable node_two.
@@ -1130,11 +1115,10 @@ The second node should have value b and be stored in a variable node_two.
 
 # node_one = Node("a")
 # node_two = Node("b")
-# print(node_one.value) 
-# print(node_one.next) 
+# print(node_one.value)
+# print(node_one.next)
 # print(node_two.value)
-# print(node_two.next) 
-
+# print(node_two.next)
 '''
 To link the nodes, we can set a node's next attribute to hold another node. Update node_one from the Problem 9 to point to node_two.
 '''
@@ -1154,7 +1138,6 @@ To link the nodes, we can set a node's next attribute to hold another node. Upda
 # print(node_one.value)
 # print(node_one.next)
 # print(node_two.value)
-
 '''
 Create the list ["Mario", "Luigi", "Wario", "Toad"] as a linked list given the Node class:
 '''
@@ -1173,7 +1156,6 @@ Create the list ["Mario", "Luigi", "Wario", "Toad"] as a linked list given the N
 # print(node_2.value, "->", node_2.next.value)
 # print(node_3.value, "->", node_3.next.value)
 # print(node_4.value, "->", node_4.next)
-
 '''
 Write a function print_linked_list() that takes in a head node as a parameter and prints the linked list using the string " -> " to separate each node.
 '''
@@ -1196,16 +1178,273 @@ Write a function print_linked_list() that takes in a head node as a parameter an
 # a = Node("a", Node("b", Node("c", Node("d", Node("e")))))
 
 # print(print_linked_list(a))
+'''
+Then, write a method attack() that takes in a Pokemon object opponent and decreases opponent's hp by their self's damage amount.
+
+If damaging the opponent leads to the opponent having an hp of 0 or less, the function should set the opponent's hp to 0 and print out "<Opponent name> fainted>.
+
+Otherwise, the function should print out "<Pokemon name> dealt <damage> damage to <opponent name>".
+'''
+
+# class Pokemon():
+#    def  __init__(self, name, hp, damage):
+#       self.name = name
+#       self.hp = hp # hit points
+#       self.damage = damage # The amount of damage this pokemon does to its opponent every attack
+
+#    def attack(self, opponent):
+#       opponent.hp -= self.damage
+#       if opponent.hp <= 0:
+#          opponent.hp = 0
+#          print(f"{opponent.name} fainted")
+#       else:
+#          print(f"{self.name} dealt {self.damage} damage to {opponent.name}")
+
+# pikachu = Pokemon("Pikachu", 35, 20)
+# bulbasaur = Pokemon("Bulbasaur", 45, 30)
+
+# opponent = bulbasaur
+# pikachu.attack(opponent)
+'''
+Using the provided Node class below, create the normal Python list ["Jigglypuff", "Wigglytuff"] as a linked list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# node_2 = Node("Wigglypuff")
+# node_1 = Node("Jigglypuff", node_2)
+
+# print(node_1.value, "->", node_1.next.value)
+# print(node_2.value, "->", node_2.next)
+'''
+Write a function add_first() that takes in a head of a linked list and a new_node from the Node class as parameters.
+
+It should insert new_node as the new head of the linked_list. The function returns new_node.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# def add_first(head, new_node):
+#    new_node.next = head
+#    return new_node
+
+# node_2 = Node("Wigglypuff")
+# node_1 = Node("Jigglypuff", node_2)
+
+# # Using the Linked List from Problem 2
+# print(node_1.value, "->", node_1.next.value)
+
+# new_node = Node("Ditto")
+# node_1 = add_first(node_1, new_node)
+
+# print(node_1.value, "->", node_1.next.value)
+'''
+Write a function get_tail() that takes in the head of a linked list as a parameter.
+
+It should print out the value of the tail of the list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+
+# def get_tail(head):
+#    current_value = head
+#    if current_value is None:
+#       return None
+#    else:
+#       while current_value.next is not None:
+#          current_value = current_value.next
+#    return current_value
+
+# num1=Node("num1", Node("num2", Node("num3")))
+
+# head = num1
+# tail = get_tail(num1)
+# print(tail)
+
+'''
+Using the Node class, write a function ll_replace() that takes a head of a linked list and two values, original and replacement as parameters.
+
+The function updates any node with value original to have value replacement.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+
+# def ll_replace(head, original, replacement):
+#    current = head
+#    while current:
+#       if current.value == original:
+#          current.value = replacement
+#       current = current.next
 
 
+# num3 = Node(5)
+# num2 = Node(6, num3)
+# num1 = Node(5, num2)
+# # initial linked list: 5 -> 6 -> 5
 
 
+# head = num1
+# ll_replace(head, 5, "banana")
+# # updated linked list: "banana" -> 6 -> "banana"
+
+# print(num1, "->", num2,"->", num3 )
+
+'''
+Write a function listify_first_n() that takes in a head of a linked list and a non-negative integer n as parameters.
+
+The function returns a list of values of the first n nodes.
+
+If n is greater than the length of the linked list, return a list of the values of all nodes in the linked list.
+'''
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# def listify_first_n(head, n):
+#    lst = []
+#    current = head
+#    while current:
+#       lst.append(current.value)
+#       current = current.next
+#    return lst[0:n]
+
+# a = Node("a", Node("b", Node("c")))
+
+# # linked list: a -> b -> c
+# head = a
+# lst = listify_first_n(head,2)
+# print(lst)
+
+# # linked list: j -> k -> l 
+# j= Node("j", Node("k", Node("l")))
+# head2 = j
+# lst2 = listify_first_n(head2,5)
+# print(lst2)
+
+'''
+Write a function ll_insert() that takes in a head of a linked list, a value val, and an index i as parameters.
+
+The function should insert a new Node with value val at index i of the linked list, then return the head of the linked list.
+
+If i is greater than the length of the list, insert the new node at the end of the list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+
+# def ll_insert(head, val, i):
+#    current = head
+#    new_node = current.next
+#    index = 0
+#    while current:
+#       if index == i-1:
+#          current.next = Node(val,new_node.next)
+         
+#       index += 1     
+#       current = current.next
+
+# head=Node(3, Node(8, Node(12, Node(9))))
+# print(head,head.next,head.next.next,head.next.next.next,sep=" -> ")
+# # linked list: 3 -> 8 -> 12 -> 9
+# ll_insert(head, 20, 2)
+# print(head,head.next,head.next.next, head.next.next.next, head.next.next.next.next,sep=" -> ")
+
+# # result linked list: 3 -> 8 -> 20 -> 12 -> 9
+
+'''
+Write a function list_to_linked_list() that takes in a list lst as a parameter and converts it to a linked list. The function should return the head of the linked list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+#    def __repr__(self):
+#       return f"{self.value}"
+      
+# def list_to_linked_list(lst):
+#    last = len(lst)-1
+#    head = None
+#    for i in range(last,-1,-1):
+#      head = Node(lst[i], head)
+#    return head
+
+# normal_list = ["Betty", "Veronica", "Archie", "Jughead"]
+# linked_list = list_to_linked_list(normal_list)
+# print(linked_list) # Only prints the head element!
+
+'''
+Given the Node class for a doubly linked list below, recreate the list ["Poliwag", "Poliwhirl", "Poliwrath"] as a doubly linked list.
+'''
+# class Node:
+#    def __init__(self, value, next = None, prev = None):
+#       self.value = value
+#       self.next = next
+#       self.prev = prev
+
+# poliwrath=Node("poliwrath")
+# poliwhirl=Node("poliwhirl",poliwrath)
+# poliwag=Node("poliwag",poliwhirl)
+# poliwrath.prev = poliwhirl
+# poliwhirl.prev = poliwag
+
+# print(poliwhirl.prev.value, "<->", poliwhirl.value, "<->", poliwhirl.next.value)
+
+'''
+Write a function print_reverse() that takes in the tail of a doubly linked list as a parameter.
+It should print out the values of the linked list in reverse order, each separated by a space.
+'''
+
+# class Node:
+#    def __init__(self, value, next = None, prev = None):
+#       self.value = value
+#       self.next = next
+#       self.prev = prev
+
+# def print_reverse(tail):
+#    current = tail
+#    tail_str = []
+#    while current:
+#       tail_str.append(current.value)
+#       current = current.prev
+#    print(" ".join(tail_str))
+
+# poliwrath=Node("poliwrath")
+# poliwhirl=Node("poliwhirl",poliwrath)
+# poliwag=Node("poliwag",poliwhirl)
+# poliwrath.prev = poliwhirl
+# poliwhirl.prev = poliwag
+
+# print_reverse(poliwrath)
+      
 
 
-   
+      
+      
 
-
-
-
-
-   
+         
