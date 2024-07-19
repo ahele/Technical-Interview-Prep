@@ -1396,7 +1396,7 @@ Write a function list_to_linked_list() that takes in a list lst as a parameter a
 
 # normal_list = ["Betty", "Veronica", "Archie", "Jughead"]
 # linked_list = list_to_linked_list(normal_list)
-# print(linked_list) # Only prints the head element!
+# print(linked_list.next.value) # Only prints the head element!
 
 '''
 Given the Node class for a doubly linked list below, recreate the list ["Poliwag", "Poliwhirl", "Poliwrath"] as a doubly linked list.
@@ -1441,6 +1441,163 @@ It should print out the values of the linked list in reverse order, each separat
 # poliwhirl.prev = poliwag
 
 # print_reverse(poliwrath)
+
+'''
+Add a line of code (outside of the class) to create the linked list 4 -> 3 -> 2 in a single assignment statement.
+'''
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# head = Node(4, Node(3, Node(2)))
+
+# print(head.value, head.next.value, head.next.next.value, sep= " - > ")
+
+'''
+Given the head of a linked list and a value val, return the frequency of val in the list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#       self.value = value
+#       self.next = next
+
+# def count_element(head, val):
+#    count = 0
+#    current = head
+#    while current:
+#       if current.value == val:
+#          count += 1
+#       current = current.next
+#    return count
+
+# head = Node(3, Node(1, Node(2, Node(1))))
+# print(count_element(head, 1))
+
+'''
+Create your own test cases to run the code against, and use print statements and the stack trace to identify and fix the bug so that the function correctly removes the tail of the list.
+'''
+
+# class Node:
+#     def __init__(self, value=None, next=None):
+#         self.value = value
+#         self.next = next
+
+
+# # Helper function to print the linked list
+# def print_list(node):
+#     current = node
+#     while current:
+#         print(current.value, end=" -> " if current.next else "")
+#         current = current.next
+#     print()
+
+
+# # I have a bug! 
+# def remove_tail(head):
+#     if head is None: # If the list is empty, return None
+#         return None
+#     if head.next is None: # If there's only one node, removing it leaves the list empty
+#         return None 
+
+#    # Start from the head and find the second-to-last node
+#     current = head
+#     while current.next.next: 
+#         current = current.next
+
+#     current.next = None # Remove the last node by setting second-to-last node to None
+#     return print_list(head)
+
+# head = Node(1, Node(2, Node(3, Node(4))))
+
+# print_list(head)
+# remove_tail(head)
+
+'''
+A variation of the two-pointer technique introduced in Unit 4 is to have a slow and a fast pointer that increment at different rates. Given the head of a linked list, use the slow-fast pointer technique to find the middle node of a linked list. If there are two middle nodes, return the second middle node.
+'''
+# class Node:
+#    def __init__(self, value, next=None):
+#        self.value = value
+#        self.next = next
+
+# def find_middle_element(head):
+#    slow_pointer = head
+#    fast_pointer = head
+#    while fast_pointer and fast_pointer.next:
+#       slow_pointer = slow_pointer.next
+#       fast_pointer = fast_pointer.next.next
+
+#    return slow_pointer.value
+
+# head = Node(1, Node(2, Node(3)))
+# print(f"the middle node is {find_middle_element(head)}")
+
+'''
+Given the head of a singly linked list, return True if the values of the linked list are palindromic and False otherwise. Use the two-pointer technique in your solution.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#        self.value = value
+#        self.next = next
+
+# def is_palindrome(head):
+#    current = head
+#    check_list = []
+#    while current:
+#       check_list.append(current.value)
+#       current = current.next
+
+#    check = 0
+#    pointer_1 = 0
+#    pointer_2 = len(check_list)-1
+#    while pointer_1 < pointer_2:
+#       if check_list[pointer_1] != check_list[pointer_2]:
+#          check += 1
+#          break
+#       else:
+#          pointer_1 += 1
+#          pointer_2 -= 1
+
+#    return not check
+
+# head = Node(1, Node(2, Node(1)))
+# print(is_palindrome(head))
+
+'''
+Given the head of a singly linked list, reverse the list, and return the reversed list. You must reverse the list in place. Return the head of the reversed list.
+'''
+
+# class Node:
+#    def __init__(self, value, next=None):
+#        self.value = value
+#        self.next = next
+
+# def reverse(head):
+#    current = head
+#    check_list = []
+#    while current:
+#       check_list.append(current.value)
+#       current = current.next
+
+#    new_head = None
+#    for i in range(len(check_list)):
+#       new_head = Node(check_list[i], new_head)
+#    return new_head.value
+
+# head = Node(1, Node(2, Node(3, Node(4))))
+# print(f" the new head of the revesal linked list is {reverse(head)}")
+
+
+
+   
+   
+   
+
+
+
       
 
 
