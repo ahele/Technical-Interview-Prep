@@ -1590,7 +1590,181 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 # head = Node(1, Node(2, Node(3, Node(4))))
 # print(f" the new head of the revesal linked list is {reverse(head)}")
 
+'''
+A circular linked list is a linked list where the tail node points at the head node. Given the head of a linked list, write a function is_circular() that returns True if the linked list is circular and False otherwise.
+'''
+# class Node:
+#     def __init__(self, value, next=None):
+#         self.value = value
+#         self.next = next
 
+# def is_circular(head):
+#    current = head
+#    while current.next:
+#       current = current.next
+#    return current.value == head.value
+
+# num1 = Node("num1", Node("num2", Node("num3", Node("num1"))))
+# print(is_circular(num1))
+# var1 = Node("var1", Node("var2", Node("var3")))
+# print(is_circular(var1))
+
+'''
+Given the head of a singly linked list, write a function that returns the last node in the cycle. If there is no cycle in the linked list, return None.
+'''
+# class Node:
+#    def __init__(self, value, next=None):
+#        self.value = value
+#        self.next = next
+      
+# def find_last_node_in_cycle(head):
+#    seen = []
+#    seen.append(head.value)
+#    current = head
+#    while current.next:
+#       if current.next.value not in seen:
+#          seen.append(current.next.value)
+#       else:
+#          break
+#       current = current.next
+#    if not current.next:
+#       return False
+#    else:
+#       return current.value
+
+# head = Node("num1", Node("num2", Node("num3", Node("num4", Node("num2")))))
+# print(find_last_node_in_cycle(head))
+
+'''
+Given the head of a linked list and a value val, partition a linked list around val such that all nodes with values less than val come before nodes with values greater than or equal to val.
+'''
+
+# class Node:
+#     def __init__(self, value, next=None):
+#         self.value = value
+#         self.next = next
+
+# def partition(head, val):
+#    part_1 = None
+#    part_2 = None
+#    current = head
+#    while current:
+#       if current.value < val:
+#          part_1 = Node(current.value, part_1)
+#       else:
+#          part_2 = Node(current.value, part_2)
+#       current = current.next
+#    part_1.next.next.next = part_2
+#    return part_1
+
+# def print_list(head):
+#     current = head
+#     while current:
+#         print(current.value, end=" -> " if current.next else "")
+#         current = current.next
+
+
+      
+
+# head = Node(1, Node(4, Node(3, Node(2, Node(5, Node(2))))))
+# print_list(partition(head, 3))
+
+'''
+You are given the head of a linked list. Each value in the linked list is either 0 or 1, and the entire linked list represents a binary number. Return an integer that is the decimal value of the number represented by the linked list. The most significant bit is at the head of the linked list.
+'''
+# class Node:
+#     def __init__(self, value, next=None):
+#         self.value = value
+#         self.next = next
+
+# def binary_to_int(head):
+#    int = 0
+#    current = head
+#    while current:
+#       if current.value % 2 == 1:
+#          int += 2
+#       else:
+#          int += 1
+         
+#       current = current.next
+#    return int
+
+# num1 = Node(1, Node(0, Node(1)))
+# int_num = binary_to_int(num1) 
+# print(int_num)
+
+'''
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+'''
+
+# class Node:
+#     def __init__(self, value, next=None):
+#         self.value = value
+#         self.next = next
+
+# def add_two_numbers(head_a, head_b):
+#    list_1 = []
+#    list_2 = []
+#    current_a = head_a
+#    current_b = head_b
+#    while current_a:
+#       list_1.append(current_a.value)
+#       current_a = current_a.next
+
+#    while current_b:
+#       list_2.append(current_b.value)
+#       current_b = current_b.next
+
+#    rev_list_1 = [str(i) for i in list_1[::-1]]
+#    rev_list_2 = [str(i) for i in list_2[::-1]]
+
+#    return int("".join(rev_list_1)) + int("".join(rev_list_2))
+
+# head_a = Node(2, Node(4, Node(3)))
+# head_b = Node(5, Node(6, Node(4)))
+# sum = add_two_numbers(head_a, head_b)
+# print(f' The sum of two reversed linked with heads {head_a.value} and {head_b.value} list is {sum}')
+
+'''
+Given the head of a linked list and indices m and n, reverse the linked list between positions m and n. Assume the linked list uses 1-based indexing and the 0 <= m <= n <= length of list. Return the head of the list.
+'''
+
+# class Node:
+#     def __init__(self, value, next=None):
+#         self.value = value
+#         self.next = next
+
+# def reverse_between(head, m, n):
+#    lst = []
+#    current = head
+#    new_head = None
+#    while current:
+#       lst.append(current.value)
+#       current = current.next
+
+#    for i in range(len(lst)):
+#       if i >= m-1 and i <= n-1:
+#          new_head = Node(lst[i], new_head)
+#    head.next = new_head
+#    return head
+
+# def print_node(head):
+#    current = head
+#    while current:
+#       print(current.value, end = " - > " if current.next else "")
+#       current = current.next
+      
+# head = Node(1, Node(2, Node(3, Node(4, Node(5)))))
+# print_node(reverse_between(head, 2, 5))
+   
+
+
+
+   
+
+
+   
+      
 
    
    
