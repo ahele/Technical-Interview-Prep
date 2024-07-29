@@ -1272,7 +1272,6 @@ It should print out the value of the tail of the list.
 # head = num1
 # tail = get_tail(num1)
 # print(tail)
-
 '''
 Using the Node class, write a function ll_replace() that takes a head of a linked list and two values, original and replacement as parameters.
 
@@ -1294,19 +1293,16 @@ The function updates any node with value original to have value replacement.
 #          current.value = replacement
 #       current = current.next
 
-
 # num3 = Node(5)
 # num2 = Node(6, num3)
 # num1 = Node(5, num2)
 # # initial linked list: 5 -> 6 -> 5
-
 
 # head = num1
 # ll_replace(head, 5, "banana")
 # # updated linked list: "banana" -> 6 -> "banana"
 
 # print(num1, "->", num2,"->", num3 )
-
 '''
 Write a function listify_first_n() that takes in a head of a linked list and a non-negative integer n as parameters.
 
@@ -1334,12 +1330,11 @@ If n is greater than the length of the linked list, return a list of the values 
 # lst = listify_first_n(head,2)
 # print(lst)
 
-# # linked list: j -> k -> l 
+# # linked list: j -> k -> l
 # j= Node("j", Node("k", Node("l")))
 # head2 = j
 # lst2 = listify_first_n(head2,5)
 # print(lst2)
-
 '''
 Write a function ll_insert() that takes in a head of a linked list, a value val, and an index i as parameters.
 
@@ -1363,8 +1358,8 @@ If i is greater than the length of the list, insert the new node at the end of t
 #    while current:
 #       if index == i-1:
 #          current.next = Node(val,new_node.next)
-         
-#       index += 1     
+
+#       index += 1
 #       current = current.next
 
 # head=Node(3, Node(8, Node(12, Node(9))))
@@ -1374,7 +1369,6 @@ If i is greater than the length of the list, insert the new node at the end of t
 # print(head,head.next,head.next.next, head.next.next.next, head.next.next.next.next,sep=" -> ")
 
 # # result linked list: 3 -> 8 -> 20 -> 12 -> 9
-
 '''
 Write a function list_to_linked_list() that takes in a list lst as a parameter and converts it to a linked list. The function should return the head of the linked list.
 '''
@@ -1386,7 +1380,7 @@ Write a function list_to_linked_list() that takes in a list lst as a parameter a
 
 #    def __repr__(self):
 #       return f"{self.value}"
-      
+
 # def list_to_linked_list(lst):
 #    last = len(lst)-1
 #    head = None
@@ -1397,7 +1391,6 @@ Write a function list_to_linked_list() that takes in a list lst as a parameter a
 # normal_list = ["Betty", "Veronica", "Archie", "Jughead"]
 # linked_list = list_to_linked_list(normal_list)
 # print(linked_list.next.value) # Only prints the head element!
-
 '''
 Given the Node class for a doubly linked list below, recreate the list ["Poliwag", "Poliwhirl", "Poliwrath"] as a doubly linked list.
 '''
@@ -1414,7 +1407,6 @@ Given the Node class for a doubly linked list below, recreate the list ["Poliwag
 # poliwhirl.prev = poliwag
 
 # print(poliwhirl.prev.value, "<->", poliwhirl.value, "<->", poliwhirl.next.value)
-
 '''
 Write a function print_reverse() that takes in the tail of a doubly linked list as a parameter.
 It should print out the values of the linked list in reverse order, each separated by a space.
@@ -1441,7 +1433,6 @@ It should print out the values of the linked list in reverse order, each separat
 # poliwhirl.prev = poliwag
 
 # print_reverse(poliwrath)
-
 '''
 Add a line of code (outside of the class) to create the linked list 4 -> 3 -> 2 in a single assignment statement.
 '''
@@ -1453,7 +1444,6 @@ Add a line of code (outside of the class) to create the linked list 4 -> 3 -> 2 
 # head = Node(4, Node(3, Node(2)))
 
 # print(head.value, head.next.value, head.next.next.value, sep= " - > ")
-
 '''
 Given the head of a linked list and a value val, return the frequency of val in the list.
 '''
@@ -1474,7 +1464,6 @@ Given the head of a linked list and a value val, return the frequency of val in 
 
 # head = Node(3, Node(1, Node(2, Node(1))))
 # print(count_element(head, 1))
-
 '''
 Create your own test cases to run the code against, and use print statements and the stack trace to identify and fix the bug so that the function correctly removes the tail of the list.
 '''
@@ -1484,7 +1473,6 @@ Create your own test cases to run the code against, and use print statements and
 #         self.value = value
 #         self.next = next
 
-
 # # Helper function to print the linked list
 # def print_list(node):
 #     current = node
@@ -1493,17 +1481,16 @@ Create your own test cases to run the code against, and use print statements and
 #         current = current.next
 #     print()
 
-
-# # I have a bug! 
+# # I have a bug!
 # def remove_tail(head):
 #     if head is None: # If the list is empty, return None
 #         return None
 #     if head.next is None: # If there's only one node, removing it leaves the list empty
-#         return None 
+#         return None
 
 #    # Start from the head and find the second-to-last node
 #     current = head
-#     while current.next.next: 
+#     while current.next.next:
 #         current = current.next
 
 #     current.next = None # Remove the last node by setting second-to-last node to None
@@ -1513,7 +1500,6 @@ Create your own test cases to run the code against, and use print statements and
 
 # print_list(head)
 # remove_tail(head)
-
 '''
 A variation of the two-pointer technique introduced in Unit 4 is to have a slow and a fast pointer that increment at different rates. Given the head of a linked list, use the slow-fast pointer technique to find the middle node of a linked list. If there are two middle nodes, return the second middle node.
 '''
@@ -1533,7 +1519,6 @@ A variation of the two-pointer technique introduced in Unit 4 is to have a slow 
 
 # head = Node(1, Node(2, Node(3)))
 # print(f"the middle node is {find_middle_element(head)}")
-
 '''
 Given the head of a singly linked list, return True if the values of the linked list are palindromic and False otherwise. Use the two-pointer technique in your solution.
 '''
@@ -1565,7 +1550,6 @@ Given the head of a singly linked list, return True if the values of the linked 
 
 # head = Node(1, Node(2, Node(1)))
 # print(is_palindrome(head))
-
 '''
 Given the head of a singly linked list, reverse the list, and return the reversed list. You must reverse the list in place. Return the head of the reversed list.
 '''
@@ -1589,7 +1573,6 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 
 # head = Node(1, Node(2, Node(3, Node(4))))
 # print(f" the new head of the revesal linked list is {reverse(head)}")
-
 '''
 A circular linked list is a linked list where the tail node points at the head node. Given the head of a linked list, write a function is_circular() that returns True if the linked list is circular and False otherwise.
 '''
@@ -1608,7 +1591,6 @@ A circular linked list is a linked list where the tail node points at the head n
 # print(is_circular(num1))
 # var1 = Node("var1", Node("var2", Node("var3")))
 # print(is_circular(var1))
-
 '''
 Given the head of a singly linked list, write a function that returns the last node in the cycle. If there is no cycle in the linked list, return None.
 '''
@@ -1616,7 +1598,7 @@ Given the head of a singly linked list, write a function that returns the last n
 #    def __init__(self, value, next=None):
 #        self.value = value
 #        self.next = next
-      
+
 # def find_last_node_in_cycle(head):
 #    seen = []
 #    seen.append(head.value)
@@ -1634,7 +1616,6 @@ Given the head of a singly linked list, write a function that returns the last n
 
 # head = Node("num1", Node("num2", Node("num3", Node("num4", Node("num2")))))
 # print(find_last_node_in_cycle(head))
-
 '''
 Given the head of a linked list and a value val, partition a linked list around val such that all nodes with values less than val come before nodes with values greater than or equal to val.
 '''
@@ -1663,12 +1644,8 @@ Given the head of a linked list and a value val, partition a linked list around 
 #         print(current.value, end=" -> " if current.next else "")
 #         current = current.next
 
-
-      
-
 # head = Node(1, Node(4, Node(3, Node(2, Node(5, Node(2))))))
 # print_list(partition(head, 3))
-
 '''
 You are given the head of a linked list. Each value in the linked list is either 0 or 1, and the entire linked list represents a binary number. Return an integer that is the decimal value of the number represented by the linked list. The most significant bit is at the head of the linked list.
 '''
@@ -1685,14 +1662,13 @@ You are given the head of a linked list. Each value in the linked list is either
 #          int += 2
 #       else:
 #          int += 1
-         
+
 #       current = current.next
 #    return int
 
 # num1 = Node(1, Node(0, Node(1)))
-# int_num = binary_to_int(num1) 
+# int_num = binary_to_int(num1)
 # print(int_num)
-
 '''
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 '''
@@ -1724,7 +1700,6 @@ You are given two non-empty linked lists representing two non-negative integers.
 # head_b = Node(5, Node(6, Node(4)))
 # sum = add_two_numbers(head_a, head_b)
 # print(f' The sum of two reversed linked with heads {head_a.value} and {head_b.value} list is {sum}')
-
 '''
 Given the head of a linked list and indices m and n, reverse the linked list between positions m and n. Assume the linked list uses 1-based indexing and the 0 <= m <= n <= length of list. Return the head of the list.
 '''
@@ -1753,10 +1728,9 @@ Given the head of a linked list and indices m and n, reverse the linked list bet
 #    while current:
 #       print(current.value, end = " - > " if current.next else "")
 #       current = current.next
-      
+
 # head = Node(1, Node(2, Node(3, Node(4, Node(5)))))
 # print_node(reverse_between(head, 2, 5))
-
 '''
 Step 1: Copy the recursive function repeat_hello() into Replit and run it.
 
@@ -1778,7 +1752,6 @@ Compare your iterative (non-recursive) solution to the recursive solution provid
 #       i += 1
 
 # repeat_hello_iterative(5)
-
 '''
 Given the base case and recursive case, write a function factorial() that returns the factorial of a non-negative integer n. The factorial of a number is the product of all numbers between 1 and n.
 '''
@@ -1789,7 +1762,6 @@ Given the base case and recursive case, write a function factorial() that return
 #    return result
 
 # print(factorial(5))
-
 '''
 Without using the built-in sum() function, write a function sum_list() that calculates the sum of all values in a list recursively.
 
@@ -1801,7 +1773,6 @@ What is the time complexity of this function? What is the space complexity?
 #    return lst[0] + sum_list(lst[1:])
 
 # print(sum_list([1,2,3,4,5]))
-
 '''
 Given an integer n, return True if n is a power of two. Otherwise, return `False``.
 
@@ -1823,7 +1794,6 @@ Solve the problem recursively. What is the time complexity of this function? Wha
 #    return is_power_of_two(n//2)
 
 # print(is_power_of_two(8))
-
 '''
 Binary search is a searching algorithm that allows us to efficiently find the index of a given value within a sorted list. Given the pseudo code for binary search below, implement an iterative (non-recursive) implementation of binary search.
 
@@ -1844,19 +1814,15 @@ Evaluate the time and space complexity of your implementation.
 #       else:
 #          right_pointer = middle - 1
 
-
-#    return -1 
-
+#    return -1
 
 # lst = [1, 3, 5, 7, 9, 11, 13, 15]
 # print(binary_search(lst, 11))
-
 '''
 Generally binary search returns the index of the first occurrence of the target in the list. Write an updated version of binary search find_last() that, given a list that may contain duplicates, returns the index of the last occurrence of target.
 
 Evaluate the time and space complexity of your function.
 '''
-
 
 # def find_last(lst, target):
 #       left_pointer = 0
@@ -1868,7 +1834,7 @@ Evaluate the time and space complexity of your function.
 
 #          if lst[middle] == target:
 #             middle_num = lst[middle]
-#             break 
+#             break
 #          elif lst[middle]< target:
 #             left_pointer = middle + 1
 #          else:
@@ -1886,8 +1852,6 @@ Evaluate the time and space complexity of your function.
 
 # lst = [1, 3, 5, 7, 9, 11, 11, 13, 15]
 # print(find_last(lst, 11))
-
-
 '''
 Given a sorted list of integers and a value x, return the index of the floor of x. The floor of x is the largest element in the array smaller than or equal to x. If there is no floor of x, return -1.
 
@@ -1904,30 +1868,189 @@ Evaluate the time and space complexity of your function.
 # print(find_floor(lst, 5))
 
 
-   
+'''
+Given a string, return True if it is a nesting of zero or more pairs of parentheses. Return False otherwise. A valid pair of parentheses is defined as (). The input string will only contain the characters ( or ). Your solution must be recursive.
 
+Evaluate the time and space complexity of your solution.
+'''
 
-   
-   
+# def is_nested(paren_s):
+#    if paren_s == "":
+#       return True
 
+#    if paren_s[0]== "(" and paren_s[-1] == ")":
+#       return is_nested(paren_s[1:-1])
+#    return False
 
+# paren_s_1 = "(())"
+# paren_s_2 = "((())"
+# paren_s_3 = "(((}))"
+# print(is_nested(paren_s_1))
+# print(is_nested(paren_s_2))
+# print(is_nested(paren_s_3))
 
-   
+'''
+Given a sorted list of integers containing only 0s and 1s, count the total number of 1’s in the array in O(log n) time.
+'''
 
+# def count_ones(lst):
+#    left = 0
+#    right = len(lst) -1 
+#    count = 0
+#    while left <= right:
+#       middle = (left + right) // 2
+#       if lst[middle] ==  1 and (lst[middle -1 ] == 0 or middle == 0):
+#          count += len(lst) - middle
+#          right = middle -1
+#       else:
+#          left = left + 1
+#    return count
+      
+# lst1 = [0,0,0,0,1,1,1]
+# lst2 = [0,1]
+# lst3 = [0,0,1,1,1,1]
+# lst4 = [0,0,0,1,1,1]
 
-   
+# print(count_ones(lst1))
+# print(count_ones(lst2))
+# print(count_ones(lst3))
+# print(count_ones(lst4))
+
+'''
+Thus far, we’ve mostly been using an iterative implementation of the binary search algorithm. Recursive implementations of binary search are also very common. Implement binary_search() recursively.
+'''
+
+# def binary_search(nums, target):
+#    def index_finder(nums, target, low, high):
+#       if low <= high:
+
+#          middle =(low+high)//2
+#          if nums[middle]==target:
+#             return middle
+#          elif nums[middle] < target:
+#             return index_finder(nums, target, middle + 1, high)
+#          else:
+#             return index_finder(nums, target, low, middle -1)
+#       else:
+#          return -1
+#    return index_finder(nums, target, 0, len(nums)-1)
       
 
-   
-   
-   
 
 
+# num1 = [1,3,5,7,9,11,13,15]
+# num2 = [1,2]
+# num3 = [1,1,1,1,7,8,9,10]
+# num4 = [3,4,5,6]
 
-      
+# print(binary_search(num1, 11))
+# print(binary_search(num2, 2))
+# print(binary_search(num3, 10))
+# print(binary_search(num4, 3))
+
+'''
+You are given a circularly sorted list of integers. A circularly sorted list of integers is a sorted list whose elements have then been rotated some number of times such that the last element of the array becomes the first element of the array. Write a function count_rotations() that returns the total number of times the array is rotated. Assume there are no duplicates in the array.
+'''
+
+# def count_rotations(nums):
+#    left = 0
+#    right = len(nums) - 1
+
+#    while left < right:
+#       if nums[left] <= nums[right]:
+#          return left
+
+#       mid = (left + right) // 2
+#       next = nums[mid + 1]
+#       prev = nums[mid - 1]
 
 
-      
-      
-
+#       if nums[mid] <= prev and nums[mid] <= next:
+#          return mid
          
+#       elif nums[mid] <= nums[right]:
+#          right = mid - 1
+#       else:
+#          left = mid + 1
+   
+
+
+
+# nums = [8, 9, 10, 2, 5, 6]
+# print(count_rotations(nums))
+
+'''
+Merge sort is a sorting algorithm that takes in an unsorted list and returns a sorted list in O(n log n) time which is faster than many other sorting algorithms that have O(n²) time complexity. It uses a divide and conquer approach.
+
+Merge sort works by using a divide and conquer approach: it divides the array into two halves until each sublist contains only a single element, then it recursively sorts each sublist, and merges the sorted sublists into a sorted array.
+
+Given the pseudo-code and helper function merge() below, implement the merge_sort() function.
+'''
+
+# def merge_sort(lst):
+
+#    if len(lst) <= 1:
+#       return lst
+      
+#    mid = len(lst)//2
+#    left = lst[:mid]
+#    right = lst[mid:]
+
+#    left_sorted = merge_sort(left)
+#    right_sorted = merge_sort(right)
+   
+#    def merge(left, right):
+#       result = [] 
+#       i = j = 0 
+
+#       while i < len(left) and j < len(right):
+#          if left[i] <= right[j]:
+#             result.append(left[i])
+#             i += 1
+#          else:
+#             result.append(right[j])
+#             j += 1
+
+#       while i < len(left):
+#             result.append(left[i])
+#             i += 1
+
+#       while j < len(right):
+#             result.append(right[j])
+#             j += 1
+
+#       return result
+
+#    return merge(left_sorted, right_sorted)
+
+# lst = [5,4,3,2,1]
+# print(merge_sort(lst))
+
+'''
+Given a circularly sorted list of integers, return the index of a given target. Assume there are no duplicates in the list.
+'''
+def search_circular_list(nums, target):
+   left = 0
+   right = len(nums) - 1
+
+   while left <= right:
+
+      mid = (left + right)//2
+
+      if nums[mid] == target:
+         return mid
+      
+      if nums[left] <= nums[mid]: 
+         if nums[left] <= target < nums[mid]:
+             right = mid - 1  
+         else:
+             left = mid + 1  
+      else:  
+         if nums[mid] < target <= nums[right]:
+             left = mid + 1   
+         else:
+             right = mid - 1
+   return -1
+
+nums = [8, 9, 10, 2, 5, 6]
+print(search_circular_list(nums, 2))
