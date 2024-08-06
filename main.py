@@ -2029,28 +2029,315 @@ Given the pseudo-code and helper function merge() below, implement the merge_sor
 '''
 Given a circularly sorted list of integers, return the index of a given target. Assume there are no duplicates in the list.
 '''
-def search_circular_list(nums, target):
-   left = 0
-   right = len(nums) - 1
+# def search_circular_list(nums, target):
+#    left = 0
+#    right = len(nums) - 1
 
-   while left <= right:
+#    while left <= right:
 
-      mid = (left + right)//2
+#       mid = (left + right)//2
 
-      if nums[mid] == target:
-         return mid
+#       if nums[mid] == target:
+#          return mid
       
-      if nums[left] <= nums[mid]: 
-         if nums[left] <= target < nums[mid]:
-             right = mid - 1  
-         else:
-             left = mid + 1  
-      else:  
-         if nums[mid] < target <= nums[right]:
-             left = mid + 1   
-         else:
-             right = mid - 1
-   return -1
+#       if nums[left] <= nums[mid]: 
+#          if nums[left] <= target < nums[mid]:
+#              right = mid - 1  
+#          else:
+#              left = mid + 1  
+#       else:  
+#          if nums[mid] < target <= nums[right]:
+#              left = mid + 1   
+#          else:
+#              right = mid - 1
+#    return -1
 
-nums = [8, 9, 10, 2, 5, 6]
-print(search_circular_list(nums, 2))
+# nums = [8, 9, 10, 2, 5, 6]
+# print(search_circular_list(nums, 2))
+
+'''
+Given the following TreeNode class, create the binary tree depicted in the image below.
+'''
+
+# class TreeNode:
+#     def __init__(self, val, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# Test=TreeNode(10,4,6)
+# print(Test.val)
+# print(Test.left)
+# print(Test.right)
+
+'''
+Given the root of a binary tree that has exactly 3 nodes: the root, its left child, and its right child, return True if the value of the root is equal to the sum of the values of its two children. Return False otherwise.
+
+Evaluate the time complexity of your function.
+'''
+
+# class TreeNode:
+#     def __init__(self, val, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# def check_tree(root):
+#    return root.val == root.left + root.right
+
+# root = TreeNode(10,4,6)
+# print(check_tree(root))
+
+# root1 = TreeNode(5,3,1)
+# print(check_tree(root1))
+
+'''
+Given the root of a binary tree that has at most 3 nodes: the root, its left child, and its right child, return True if the value of the root is equal to the sum of the values of its two children. Return False otherwise.
+
+Evaluate the time complexity of your function.
+'''
+
+# class TreeNode:
+#     def __init__(self, val, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+
+# def check_tree(root):
+#    if not root:
+#       return False
+#    if root.left is None:
+#       root.left = 0
+#    if root.right is None:
+#       root.right = 0
+#    return root.val == root.left + root.right
+
+# root = TreeNode(10,10)
+# root1= TreeNode(5,3,2)
+# root2= TreeNode(5,left = None, right=2)
+# root3= TreeNode(None)
+
+# print(check_tree(root))
+# print(check_tree(root1))
+# print(check_tree(root2))
+# print(check_tree(root3))
+
+'''
+Given the root of a binary tree, write a function that finds the value of the left most node in the tree.
+
+Evaluate the time complexity of your function.
+'''
+
+# class TreeNode:
+#     def __init__(self, val, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# def left_most(root):
+#    if not root:
+#       return None
+   
+#    current = root
+#    while current.left:
+#       current = current.left
+#    return current.val
+
+   
+
+# root = TreeNode(1,TreeNode(2,TreeNode(4),TreeNode(3)),TreeNode(5))
+# root1= TreeNode(1,left = None,right=TreeNode(2,left = TreeNode(3),right = None))
+
+# print(left_most(root))
+# print(left_most(root1))
+
+'''
+If you implemented the previous left_most() function iteratively, implement it recursively. If you implemented it recursively, implement it recursively.
+
+Evaluate the time complexity of the function.
+'''
+
+
+# class TreeNode:
+#     def __init__(self, val, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# def left_most(root):
+#    if not root:
+#       return None
+
+#    if not root.left:
+#       return root.val
+
+#    return left_most(root.left)
+
+
+
+# root = TreeNode(1,TreeNode(2,TreeNode(4),TreeNode(3)),TreeNode(5))
+# root1= TreeNode(1,left = None,right=TreeNode(2,left = TreeNode(3),right = None))
+
+# print(left_most(root))
+# print(left_most(root1))
+
+'''
+Given the root of a binary tree, return a list representing the inorder traversal of its nodes' values. In an inorder traversal we traverse the left subtree, then the current node, then the right subtree.
+'''
+
+
+
+# class TreeNode():
+#      def __init__(self, val, left=None, right=None):
+#          self.val = val
+#          self.left = left
+#          self.right = right
+
+# def inorder_traversal(root):
+#    lst=[]
+
+#    if not root:
+#       return []
+
+#    def helper(node, result):
+#       if node:
+#          helper(node.left, result)
+#          result.append(node.val)
+#          helper(node.right, result)
+
+#    helper(root, lst)
+
+#    return lst
+
+# root = TreeNode(1, left = None, right = TreeNode(2, left = TreeNode(3),right = None))
+# root1 = None
+# root2 = TreeNode(1)
+
+# print(inorder_traversal(root))
+# print(inorder_traversal(root1))
+# print(inorder_traversal(root2))
+
+'''
+Given the root of a binary tree, write a function size() that returns the number of nodes in the binary tree.
+
+Evaluate the time complexity of your function.
+'''
+
+# class TreeNode():
+#      def __init__(self, val, left=None, right=None):
+#          self.val = val
+#          self.left = left
+#          self.right = right
+
+# def size(root):
+
+#    if not root:
+#       return 0
+
+#    return 1 + size(root.left) + size(root.right)
+
+# root = TreeNode(4, TreeNode(2,TreeNode(1),TreeNode(3)), TreeNode(5))
+# root1 = None
+
+
+# print(size(root))
+# print(size(root1))
+
+'''
+Given the root of a binary tree, write a function size() that returns the number of nodes in the binary tree.
+
+Evaluate the time complexity of your function.
+'''
+
+# class TreeNode():
+#      def __init__(self, val, left=None, right=None):
+#          self.val = val
+#          self.left = left
+#          self.right = right
+
+# def find(root,value):
+
+#    if not root:
+#       return False
+
+#    if root.val ==value:
+#       return True
+
+#    return find(root.left,value) or find(root.right, value)
+
+
+# root = TreeNode(4, TreeNode(2,TreeNode(4),TreeNode(3)), TreeNode(5))
+
+
+# print(find(root,value=5))
+# print(find(root,value=10))
+
+'''
+Given a value and the root of a binary search tree, write a function find_bst() that returns True if there is a node with the given value in the tree. Assume the tree is balanced.
+'''
+
+# class TreeNode():
+#    def __init__(self, val, left=None, right=None):
+#       self.val = val
+#       self.left = left
+#       self.right = right
+
+# def find_bst(root, value):
+#    if not root:
+#       return False
+
+#    if root.val ==value:
+#       return True
+
+#    elif value <root.val:
+#       return find_bst(root.left, value)
+
+#    else:
+#       return find_bst(root.right, value)
+
+# root = TreeNode(4, TreeNode(2,TreeNode(1),TreeNode(3)), TreeNode(5))
+
+
+# print(find_bst(root,value=5))
+# print(find_bst(root,value=10))
+
+'''
+Given the root of a binary search tree, write a function descending_leaves() that returns a list of the values of all leaves in the BST in descending order. Assume the tree is balanced.
+'''
+
+# class TreeNode():
+#      def __init__(self, val, left=None, right=None):
+#          self.val = val
+#          self.left = left
+#          self.right = right
+   
+# def descending_leaves(root):
+      
+#    def helper_finder(node, leaves):
+#       if node:
+#          if not node.left and not node.right:
+#             leaves.append(node.val)
+#          helper_finder(node.left,leaves)
+#          helper_finder(node.right,leaves)
+
+#    lst=[]
+#    helper_finder(root,lst)
+#    return sorted(lst,reverse=True)
+
+# root = TreeNode(4, TreeNode(2,TreeNode(1),TreeNode(3)), TreeNode(5))
+# root1 = TreeNode(4, left=TreeNode(10),right = None)
+
+# print(descending_leaves(root))
+# print(descending_leaves(root1))
+      
+
+
+   
+   
+   
+   
+   
+   
+
+
